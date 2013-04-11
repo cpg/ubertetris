@@ -10,3 +10,5 @@ It is my first (personal) electronics project in nearly 20+ years, when I went r
 The project started at a [Y Combinator](http://ycombinator.com/) hardware hackathon. The motives were somewhat sinister, however ...
 
 See the [schematic](doc/v0/schematic.png), the [PCB](doc/v0/pcb.png), the [bare board](doc/v0/board-bare.jpeg), the [assembled board](doc/v0/board-assembled.jpeg) and the [wooden frame](doc/v0/wood-frame.jpeg) that isolates all the pixels.
+
+A chain of these uber-pixels has an ATtiny85 controller and is driven by an Arduino board. The code in this repo has the code for both the master (Arduino) and the slaves (the attiny85s).
