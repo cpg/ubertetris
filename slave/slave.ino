@@ -1,5 +1,5 @@
 /*
-  Slave code for uber tetris
+  Slave code for ÜberTetris controller
  */
 
 #include "pins_arduino.h"
@@ -41,6 +41,8 @@ void setup() {
   led_off(red);
   led_off(green);  
   led_off(blue);
+
+  // FIXME initialize SPI
 }
 
 void led_red(uint8_t mag) {
@@ -74,9 +76,10 @@ typedef struct rgb {
 } color_t;
 
 color_t color;
-int x=0;
-int y=0;
 
+// coordinates of this pixel
+uint8_t x=0;
+uint8_t y=0;
 
 void put_out(uint8_t red, uint8_t green, uint8_t blue){
   led_red(red);
@@ -84,7 +87,7 @@ void put_out(uint8_t red, uint8_t green, uint8_t blue){
   led_blue(blue);
 }
 
-void listen_command(int x, int y){
+void listen_command(uint8_t x, uint8_t y){
   // FIXME .. wait for a command
   
   int r = random(255);
