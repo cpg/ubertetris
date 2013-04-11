@@ -1,4 +1,4 @@
-ubertetris
+ÜberTetris
 ==========
 
 Code for the [ÜberTetris](doc/v0/schematic.png) hardware project.
