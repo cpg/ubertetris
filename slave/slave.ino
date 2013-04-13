@@ -102,5 +102,6 @@ void listen_command(uint8_t x, uint8_t y){
 void loop() {
   
   listen_command(x,y);
+  SPI.begin();
 }
 

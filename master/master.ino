@@ -26,11 +26,18 @@ void send_spi_command() {
   SPI.transfer(c);
 }
 
+void test_loop(void) {
+  SPI.transfer(0x55);
+  delay(10000);
+}
+
 // the loop routine runs over and over again forever:
 void loop() {
   
-  if (Serial.available()) {
-   send_spi_command(); 
-  }
+  test_loop();
+  
+  // if (Serial.available()) {
+  //  send_spi_command(); 
+  // }
 }
 
